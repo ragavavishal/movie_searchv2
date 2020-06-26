@@ -36,6 +36,7 @@ export default class ShowMovieDetails extends Component {
                     <li><b>Year : </b><i>{this.props.movieDet.Year}</i></li>
                     <li><b>Genre : </b><i>{this.props.movieDet.Genre}</i></li>
                     <li><b>IMDB: </b><i>{this.props.movieDet.imdbRating}</i></li>
+                    <li><b>Cast : </b><i>{this.props.movieDet.Actors}</i></li>
                     <li><b>Plot : </b><i>{this.props.movieDet.Plot}</i></li>
                 </ul>
                 </div>

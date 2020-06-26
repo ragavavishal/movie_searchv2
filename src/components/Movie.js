@@ -21,13 +21,13 @@ export default class Movie extends Component {
 
     async handleSubmit(event) {
         event.preventDefault();
-        const movie = this.state.value
         const url = "http://www.omdbapi.com/?i=tt3896198&apikey=41425427&t="
+        const movie = this.state.value
         console.log(url+movie)
         const a = await fetch(url+movie)
         // console.log(a)
         const rjson = await a.json()
-        console.log(rjson)
+        // console.log(rjson)
         console.log(rjson.Response)
         if (rjson.Response === "True"){
             this.setState({
@@ -47,7 +47,7 @@ export default class Movie extends Component {
 
     onType = (event) => {
         event.preventDefault();
-        console.log(event.target.value)
+        // console.log(event.target.value)
         // console.log(this)
         this.setState({
             value : event.target.value
@@ -74,7 +74,10 @@ export default class Movie extends Component {
                 <button type='submit'>Search</button>
                 </form>
                 </div>
-                {this.state.status ? <ShowMovieDetails movieDet ={this.state.response} /> : ''}
+                {this.state.status ? <ShowMovieDetails 
+                onclickImg ={false} 
+                movieDet ={this.state.response} 
+                /> : ''}
                 {this.state.comment ? "Check the Name Once again !!! " : ''}
 
             </React.Fragment>

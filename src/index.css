@@ -13,6 +13,8 @@ code {
 }
 
 .header{
+  border-radius: 50px;
+  /* border : 1px solid black; */
   background-color: cornflowerblue;
   padding : 20px 0;
   display : flex;

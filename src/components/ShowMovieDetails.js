@@ -4,9 +4,36 @@ export default class ShowMovieDetails extends Component {
     constructor(props) {
         super(props)
         this.state = {
-             click : false
+            click : this.props.onclickImg,
+            response : this.props.movieDet
         }
         this.onimgClick = this.onimgClick.bind(this)
+    }
+
+    componentDidMount() {
+        console.log("Component did mount!");
+    }
+
+    static getDerivedStateFromProps(nextProps, state) {
+        console.log("Component will receive props", nextProps,state);
+        if(state.response.Title === nextProps.movieDet.Title) {
+            console.log(false)
+            return null
+        } else if (state.response.Title !== nextProps.movieDet.Title) {
+            console.log("change in title", state.response.Title,nextProps.movieDet.Title)
+            return {
+                click : nextProps.onclickImg,
+                response : nextProps.movieDet
+            }
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("Component did update", prevProps, prevState);
+    }
+
+    componentWillUnmount() {
+        console.log("Component will unmount");
     }
 
     onimgClick = () => {

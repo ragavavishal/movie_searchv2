@@ -19,6 +19,15 @@ export default class ShowMovieDetails extends Component {
     
     render() {
         // console.log(this.props.movieDet.Title)
+
+
+
+
+
+
+
+
+        
         // console.log(this.props.movieDet.Poster)
         
         const a = { pic_url : this.props.movieDet.Poster}

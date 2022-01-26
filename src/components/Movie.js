@@ -14,7 +14,7 @@ export default class Movie extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    // componentDidUpdates() {
+    // componentDidUpdate() {
     //     const url = "http://www.omdbapi.com/?i=tt3896198&apikey=41425427&"
 
     // }
